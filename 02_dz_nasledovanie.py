@@ -13,6 +13,9 @@ class User():
     def get_access_level(self):
         return self._access_level
 
+    def set_name(self, name):
+        self._name = name
+
 
 class Admin(User):
     def __init__(self, user_id, name):
@@ -50,7 +53,7 @@ user5 = User(5, "Карабас Барабас")
 admin.add_user(users, user5)
 
 print(users)
-
 admin.remove_user(users, 4)
-
 print(users)
+
+print(user1.get_name())
